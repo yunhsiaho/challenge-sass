@@ -17,7 +17,7 @@ header{
     }
 
     main{
-        padding: $myPadding;
+        
         padding-top: 0px;
         padding-bottom: 0px;
             h2{
@@ -62,8 +62,15 @@ header{
                         box-sizing: border-box;
                             #selling-points {
                                 flex-grow: 2;
-                                flex-basis: 100%;
+                                flex-basis: 100%;     
                             }
+                            @for $i from 1 through 6 {
+                                #advantages li:nth-child(#{$i}) {
+                                   background-color: lighten($base-color, $i * 10%);
+                                   color:darken($base-color2, $i * 10%);
+                                 }
+                            
+                             
                     }
                     
                 code{
@@ -107,4 +114,4 @@ header{
 
 
 
-}
+}}

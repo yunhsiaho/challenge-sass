@@ -1,6 +1,6 @@
 body {
-  font: 100% "Space Mono", monospace;
   color: #6b717f;
+  font: 100% "Space Mono", monospace;
   margin: 0;
   padding: 16px;
   background-color: #fff;
@@ -13,7 +13,6 @@ body header h1 {
 }
 
 body main {
-  padding: 16px;
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -77,7 +76,37 @@ body main article section #selling-points {
       flex-basis: 100%;
 }
 
-body main article code {
+body main article section #advantages li:nth-child(1) {
+  background-color: #004d99;
+  color: #ff71b9;
+}
+
+body main article section #advantages li:nth-child(2) {
+  background-color: #0066cc;
+  color: #ff3ea0;
+}
+
+body main article section #advantages li:nth-child(3) {
+  background-color: #0080ff;
+  color: #ff0b86;
+}
+
+body main article section #advantages li:nth-child(4) {
+  background-color: #3399ff;
+  color: #d7006d;
+}
+
+body main article section #advantages li:nth-child(5) {
+  background-color: #66b3ff;
+  color: #a40053;
+}
+
+body main article section #advantages li:nth-child(6) {
+  background-color: #99ccff;
+  color: #710039;
+}
+
+body main article section code {
   background: #000;
   border: 1px solid #6b717f;
   color: #8C8C8C;
@@ -93,17 +122,17 @@ body main article code {
   word-wrap: break-word;
 }
 
-body main article code .before {
+body main article section code .before {
   float: left;
   width: 40%;
 }
 
-body main article code .after {
+body main article section code .after {
   float: right;
   width: 40%;
 }
 
-body footer h3 {
+body main footer h3 {
   color: #BF4080;
   text-align: center;
   font-size: 1.5em;

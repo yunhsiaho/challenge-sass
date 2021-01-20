@@ -6,9 +6,11 @@ $colorWhite:#fff;
 $colorGreen:green;
 $colorRed:red;
 $colorOrange:orange;
+$base-color: #036;
+$base-color2:#ffa4d2;;
 $myPadding:16px;
 @mixin box-shadow($property) {
     -webkit-box-shadow:$property;
     -moz-box-shadow: $property;
-    box-shadow: $propertyray;
+    box-shadow: $property;
 }
