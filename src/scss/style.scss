@@ -1,0 +1,110 @@
+
+@import "variables";
+
+
+body{
+    color: $colorGray;
+    font: 100% "Space Mono", monospace;
+    margin: 0;
+    padding: $myPadding;
+    background-color: $colorWhite;
+    overflow-x: hidden;
+header{
+    h1{
+        color: $colorRose;
+        text-align: center;
+        }
+    }
+
+    main{
+        padding: $myPadding;
+        padding-top: 0px;
+        padding-bottom: 0px;
+            h2{
+                color: $colorRose;
+            }
+            .messages{
+                padding: $myPadding;
+                border: 1px solid $colorLightGray;
+                color: $colorWhite;
+               .success {
+                        @extend .messages;
+                        background-color:$colorGreen;
+                        }
+                    
+                .error {
+                        @extend .messages;
+                        background-color: $colorRed;
+                        &:hover{
+                            background-color: $colorGreen;
+                                }
+                        }
+                    
+                .warning {
+                        @extend .messages;
+                        background-color: $colorOrange;
+                        }
+                
+            }
+            article{
+                display: flex;
+                flex-wrap: wrap;
+
+                    section{
+                        flex-grow: 1;
+                        flex-basis: 45%;
+                        border: 1px $colorLightGray solid;
+                        @include box-shadow(10px 10px 15px -4px $colorGray);
+                        padding: $myPadding;
+                        margin: 16px;
+                        clear: both;
+                        overflow: auto;
+                        box-sizing: border-box;
+                            #selling-points {
+                                flex-grow: 2;
+                                flex-basis: 100%;
+                            }
+                    }
+                    
+                code{
+                    background: $colorBlack;
+                    border: 1px solid $colorGray;
+                    color: $colorLightGray ;
+                    page-break-inside: avoid;
+                    font-family: monospace;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    margin-bottom: 1.6em;
+                    max-width: 100%;
+                    overflow: auto;
+                    padding: $myPadding;
+                    display: block;
+                    word-wrap: break-word;
+                        .before {
+                        float: left;
+                        width: 40%;
+                        }
+                        .after {
+                            float: right;
+                            width: 40%;
+                        }
+                }
+            }
+
+    }
+    footer{
+        h3{
+            color: $colorRose;
+            text-align: center;
+            font-size: 1.5em;
+            padding: $myPadding*2;
+            margin-bottom: 0px;
+        }
+    }
+
+
+
+
+
+
+}

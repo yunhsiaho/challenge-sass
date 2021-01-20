@@ -1,0 +1,14 @@
+$colorBlack:#000;
+$colorGray:#6b717f;
+$colorRose:#BF4080;
+$colorLightGray:#8C8C8C;
+$colorWhite:#fff;
+$colorGreen:green;
+$colorRed:red;
+$colorOrange:orange;
+$myPadding:16px;
+@mixin box-shadow($property) {
+    -webkit-box-shadow:$property;
+    -moz-box-shadow: $property;
+    box-shadow: $propertyray;
+}
