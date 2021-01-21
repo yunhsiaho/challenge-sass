@@ -4,8 +4,6 @@
  * HTML
  * SCSS
  
---- 
-
  # Learning objectives
 
  * Being able to explain what a CSS-Preprocessor is
@@ -19,8 +17,6 @@
      * Extend/Inheritance
      * Operators (Math)
      
----
-
 # Result
 https://yunhsiaho.github.io/challenge-sass/
  
