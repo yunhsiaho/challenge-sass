@@ -15,90 +15,86 @@ header{
         text-align: center;
         }
     }
-
-    main{
-        
-        padding-top: 0px;
-        padding-bottom: 0px;
-            h2{
-                color: $colorRose;
-            }
-            .messages{
-                padding: $myPadding;
-                border: 1px solid $colorLightGray;
-                color: $colorWhite;
-               .success {
-                        @extend .messages;
-                        background-color:$colorGreen;
-                        }
-                    
-                .error {
-                        @extend .messages;
-                        background-color: $colorRed;
-                        &:hover{
-                            background-color: $colorGreen;
-                                }
-                        }
-                    
-                .warning {
-                        @extend .messages;
-                        background-color: $colorOrange;
-                        }
-                
-            }
-            article{
-                display: flex;
-                flex-wrap: wrap;
-
-                    section{
-                        flex-grow: 1;
-                        flex-basis: 45%;
-                        border: 1px $colorLightGray solid;
-                        @include box-shadow(10px 10px 15px -4px $colorGray);
-                        padding: $myPadding;
-                        margin: 16px;
-                        clear: both;
-                        overflow: auto;
-                        box-sizing: border-box;
-                            #selling-points {
-                                flex-grow: 2;
-                                flex-basis: 100%;     
-                            }
-                            @for $i from 1 through 6 {
-                                #advantages li:nth-child(#{$i}) {
-                                   background-color: lighten($base-color, $i * 10%);
-                                   color:darken($base-color2, $i * 10%);
-                                 }
-                            
-                             
-                    }
-                    
-                code{
-                    background: $colorBlack;
-                    border: 1px solid $colorGray;
-                    color: $colorLightGray ;
-                    page-break-inside: avoid;
-                    font-family: monospace;
-                    font-size: 15px;
-                    line-height: 1.6;
-                    margin-bottom: 1.6em;
-                    max-width: 100%;
-                    overflow: auto;
-                    padding: $myPadding;
-                    display: block;
-                    word-wrap: break-word;
-                        .before {
-                        float: left;
-                        width: 40%;
-                        }
-                        .after {
-                            float: right;
-                            width: 40%;
-                        }
-                }
-            }
-
+main{
+padding-top: 0px;
+padding-bottom: 0px;
+    h2{
+        color: $colorRose;
     }
+    .messages{
+        padding: $myPadding;
+        border: 1px solid $colorLightGray;
+        color: $colorWhite;
+        .success {
+                @extend .messages;
+                background-color:$colorGreen;
+                }
+        .error {
+                @extend .messages;
+                background-color: $colorRed;
+                &:hover{
+                    background-color: $colorGreen;
+                        }
+                }                    
+        .warning {
+                @extend .messages;
+                background-color: $colorOrange;
+                }                
+    }
+    article{
+        display: flex;
+        flex-wrap: wrap;
+
+        section{
+            flex-grow: 1;
+            flex-basis: 45%;
+            border: 1px $colorLightGray solid;
+            @include box-shadow(10px 10px 15px -4px $colorGray);
+            padding: $myPadding;
+            margin: 16px;
+            clear: both;
+            overflow: auto;
+            box-sizing: border-box;
+            #selling-points {
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+            .advantages{                
+                @for $i from 1 through 6 {
+                    li:nth-child(6n+ #{$i}){
+                        background-color: lighten($base-color, $i * 5%);
+                        color:darken($base-color2, $i * 5%);
+                    }  
+                } 
+            }                              
+        }
+            
+        code{
+            background: $colorBlack;
+            border: 1px solid $colorGray;
+            color: $colorLightGray ;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: $myPadding;
+            display: block;
+            word-wrap: break-word;
+                .before {
+                float: left;
+                width: 40%;
+                }
+                .after {
+                    float: right;
+                    width: 40%;
+                }
+        }
+    }
+}
+
     footer{
         h3{
             color: $colorRose;
@@ -108,10 +104,4 @@ header{
             margin-bottom: 0px;
         }
     }
-
-
-
-
-
-
-}}
+}
